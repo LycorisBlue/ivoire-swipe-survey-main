@@ -101,3 +101,96 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Ajout dans src/index.css pour les animations de transition */
+
+.slide-enter-from-left {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.slide-enter-from-right {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.slide-exit-to-left {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.slide-exit-to-right {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.slide-active {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 500ms ease-in-out, opacity 500ms ease-in-out;
+}
+
+/* Animation pour les questions */
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutToLeft {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideOutToRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.question-slide-in-left {
+  animation: slideInFromLeft 500ms ease-in-out forwards;
+}
+
+.question-slide-in-right {
+  animation: slideInFromRight 500ms ease-in-out forwards;
+}
+
+.question-slide-out-left {
+  animation: slideOutToLeft 500ms ease-in-out forwards;
+}
+
+.question-slide-out-right {
+  animation: slideOutToRight 500ms ease-in-out forwards;
+}
