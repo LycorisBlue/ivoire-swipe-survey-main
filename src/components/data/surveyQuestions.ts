@@ -159,7 +159,7 @@ export const surveyQuestions: Question[] = [
   {
     id: "mobile_money",
     question:
-      "Utilisez-vous des services de paiement mobile comme Orange Money ou MTN Mobile Money pour vos achats ?",
+      "Utilisez-vous des services de paiement mobile comme Wave ou Orange money pour vos achats ?",
     component: "radio",
     options: ["Oui, souvent", "Oui, parfois", "Non, jamais"],
     required: true,
